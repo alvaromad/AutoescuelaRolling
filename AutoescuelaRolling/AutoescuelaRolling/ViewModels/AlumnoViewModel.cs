@@ -24,7 +24,7 @@ namespace AutoescuelaRolling.ViewModels
             set
             {
                 this._Alumno = value;
-                OnPropertyChanged("Doctor");
+                OnPropertyChanged("Alumno");
             }
         }
 

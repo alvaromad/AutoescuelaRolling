@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace AutoescuelaRolling.ViewModels
@@ -18,7 +19,8 @@ namespace AutoescuelaRolling.ViewModels
         public AlumnosViewModel()
         {
             helper = new HelperAutoescuelaAzure();
-            Task.Run(async () => {
+            Task.Run(async () =>
+            {
                 List<Alumno> lista = await helper.GetAlumnos();
                 this.Alumnos = new ObservableCollection<Alumno>(lista);
             });
@@ -28,10 +30,13 @@ namespace AutoescuelaRolling.ViewModels
 
         public ObservableCollection<Alumno> Alumnos
         {
-            get { return this._Alumnos; }
+            get
+            {
+                return this._Alumnos;
+            }
             set
             {
-                this._Alumnos = value;
+                _Alumnos = value;
                 OnPropertyChanged("Alumnos");
             }
         }
@@ -51,15 +56,16 @@ namespace AutoescuelaRolling.ViewModels
         {
             get
             {
-                return new Command(async () => {
+                return new Command(async () =>
+                {
                     if (AlumnoSeleccionado != null)
                     {
                         DetallesAlumno detallesview = new DetallesAlumno();
-                        AlumnoViewModel viewmodelAlumno = new AlumnoViewModel();
+                        AlumnoViewModel viewmodelalumno = new AlumnoViewModel();
 
-                        viewmodelAlumno.Alumno = this.AlumnoSeleccionado;
+                        viewmodelalumno.Alumno = this.AlumnoSeleccionado;
 
-                        detallesview.BindingContext = viewmodelAlumno;
+                        detallesview.BindingContext = viewmodelalumno;
                         await Application.Current.MainPage.Navigation.PushAsync(detallesview);
                     }
                     else

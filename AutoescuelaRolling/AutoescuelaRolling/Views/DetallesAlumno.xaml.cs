@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace AutoescuelaRolling.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DetallesAlumno : ContentView
+	public partial class DetallesAlumno : ContentPage
 	{
 		public DetallesAlumno ()
 		{

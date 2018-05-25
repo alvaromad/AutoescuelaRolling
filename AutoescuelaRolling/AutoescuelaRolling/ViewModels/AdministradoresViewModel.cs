@@ -58,11 +58,11 @@ namespace AutoescuelaRolling.ViewModels
                     if (AdministradorSeleccionado != null)
                     {
                         DetallesAdministrador detallesview = new DetallesAdministrador();
-                        AdministradorViewModel viewmodelAdministrador = new AdministradorViewModel();
+                        AdministradorViewModel viewmodeladministrador = new AdministradorViewModel();
 
-                        viewmodelAdministrador.Administrador = this.AdministradorSeleccionado;
+                        viewmodeladministrador.Administrador = this.AdministradorSeleccionado;
 
-                        detallesview.BindingContext = viewmodelAdministrador;
+                        detallesview.BindingContext = viewmodeladministrador;
                         await Application.Current.MainPage.Navigation.PushAsync(detallesview);
                     }
                     else

@@ -18,7 +18,8 @@ namespace AutoescuelaRolling.ViewModels
         public SeccionesViewModel()
         {
             helper = new HelperAutoescuelaAzure();
-            Task.Run(async () => {
+            Task.Run(async () =>
+            {
                 List<Secciones> lista = await helper.GetOficinas();
                 this.Secciones = new ObservableCollection<Secciones>(lista);
             });
@@ -54,15 +55,16 @@ namespace AutoescuelaRolling.ViewModels
         {
             get
             {
-                return new Command(async () => {
+                return new Command(async () =>
+                {
                     if (SeccionSeleccionado != null)
                     {
                         DetallesSeccion detallesview = new DetallesSeccion();
-                        SeccionViewModel viewmodelAdministrador = new AdministradorViewModel();
+                        SeccionViewModel viewmodelseccion = new SeccionViewModel();
 
-                        viewmodelAdministrador.Administrador = this.SeccionSeleccionado;
+                        viewmodelseccion.Seccion = this.SeccionSeleccionado;
 
-                        detallesview.BindingContext = viewmodelAdministrador;
+                        detallesview.BindingContext = viewmodelseccion;
                         await Application.Current.MainPage.Navigation.PushAsync(detallesview);
                     }
                     else
@@ -72,4 +74,5 @@ namespace AutoescuelaRolling.ViewModels
                 });
             }
         }
+    }
 }

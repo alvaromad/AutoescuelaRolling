@@ -34,6 +34,9 @@ namespace AutoescuelaRolling.ViewModels
             {
                 return new Command(async () =>
                 {
+                    //El método para crear un administrador es el mismo que para crear un profesor
+                    //la diferencia es que al crear el administrador en la vista se tiene que poner
+                    //Rol = ADMINISTRADOR de forma automática (Un entry ya con el parámetro no visible)
                     await helper.CrearProfesor(this.Administrador);
                 });
             }

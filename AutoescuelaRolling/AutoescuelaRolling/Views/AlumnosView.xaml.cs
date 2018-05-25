@@ -19,6 +19,6 @@ namespace AutoescuelaRolling.Views
 			InitializeComponent ();
 
         }
-        
-	}
+
+    }
 }

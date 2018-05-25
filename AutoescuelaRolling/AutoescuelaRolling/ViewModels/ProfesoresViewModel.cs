@@ -48,8 +48,8 @@ namespace AutoescuelaRolling.ViewModels
             }
         }
 
-        public Command DetallesAlumno
-        {
+        public Command DetallesProfesor
+        {        
             get
             {
                 return new Command(async () => {

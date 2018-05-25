@@ -7,9 +7,9 @@
                  BackgroundColor="#e8e8e8">
 
             <StackLayout Orientation="Vertical">
-
-                <StackLayout BackgroundColor="#e74c3c"
+                <StackLayout BackgroundColor="#000000"
                      HeightRequest="100">
+                    <Image Source="drcar.jpg" WidthRequest="500"/>
                 </StackLayout>
                 <ListView x:Name="lsvmenu"
                   RowHeight="60"

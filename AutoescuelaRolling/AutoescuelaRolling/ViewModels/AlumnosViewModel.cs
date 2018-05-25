@@ -15,6 +15,7 @@ namespace AutoescuelaRolling.ViewModels
     public class AlumnosViewModel : ViewModelBase
     {
         HelperAutoescuelaAzure helper;
+        
 
         public AlumnosViewModel()
         {
@@ -51,6 +52,9 @@ namespace AutoescuelaRolling.ViewModels
                 OnPropertyChanged("AlumnoSeleccionado");
             }
         }
+
+        
+
 
         public Command DetallesAlumno
         {

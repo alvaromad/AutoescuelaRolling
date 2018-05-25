@@ -176,12 +176,15 @@
     <BundleResource Include="Resources\alumno.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\director.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\local.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\director.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drcar.jpg" />
   </ItemGroup>
 </Project>

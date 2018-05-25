@@ -4,7 +4,7 @@
              x:Class="AutoescuelaRolling.Views.DetallesAdministrador">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin!"
+            <Label Text="DETALLES ADMINISTRADOR"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

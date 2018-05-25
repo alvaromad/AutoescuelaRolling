@@ -11,7 +11,7 @@ namespace AutoescuelaRolling
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new AutoescuelaRolling.Views.MainAutoescuelaView();
 		}
 
 		protected override void OnStart ()

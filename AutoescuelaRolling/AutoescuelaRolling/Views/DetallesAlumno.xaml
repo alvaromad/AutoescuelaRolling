@@ -4,7 +4,7 @@
              x:Class="AutoescuelaRolling.Views.DetallesAlumno">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="DETALLES ALUMNO"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

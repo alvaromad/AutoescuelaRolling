@@ -63,7 +63,7 @@ namespace AutoescuelaRolling.ViewModels
                         viewmodeladministrador.Administrador = this.AdministradorSeleccionado;
 
                         detallesview.BindingContext = viewmodeladministrador;
-                        await Application.Current.MainPage.Navigation.PushAsync(detallesview);
+                        await Application.Current.MainPage.Navigation.PushModalAsync(detallesview);
                     }
                     else
                     {

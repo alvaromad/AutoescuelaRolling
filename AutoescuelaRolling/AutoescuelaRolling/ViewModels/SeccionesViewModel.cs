@@ -65,7 +65,7 @@ namespace AutoescuelaRolling.ViewModels
                         viewmodelseccion.Seccion = this.SeccionSeleccionado;
 
                         detallesview.BindingContext = viewmodelseccion;
-                        await Application.Current.MainPage.Navigation.PushAsync(detallesview);
+                        await Application.Current.MainPage.Navigation.PushModalAsync(detallesview);
                     }
                     else
                     {

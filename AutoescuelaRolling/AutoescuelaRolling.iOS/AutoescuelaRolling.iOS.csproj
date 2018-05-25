@@ -163,4 +163,25 @@
       <Name>AutoescuelaRolling</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profesor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Administracion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\alumno.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\director.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\local.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\card.png" />
+  </ItemGroup>
 </Project>

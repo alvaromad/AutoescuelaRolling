@@ -1,12 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AutoescuelaRolling.ViewModels"
+             x:Name="VistaProfesores"
              x:Class="AutoescuelaRolling.Views.ProfesoresView">
+    <ContentPage.BindingContext>
+        <viewmodels:ProfesoresViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="PROFESORES"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView ItemsSource="{Binding Profesores}"
+                    SelectedItem="{Binding ProfesorSeleccionado}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                            <Image Source="card.png" WidthRequest="30"
+                                   HorizontalOptions="End">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding BindingContext.DetallesProfesor, Source={x:Reference VistaProfesores}}"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="avatar.png" WidthRequest="30"/>
+                            <Label FontSize="20"
+                                   Text="{Binding Nombre}"
+                                   HorizontalOptions="Start"/>
+                            <Label FontSize="20"
+                                   Text="{Binding Apellido}"
+                                   HorizontalOptions="Start"/>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

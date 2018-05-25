@@ -1,12 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AutoescuelaRolling.ViewModels"
+             x:Name="VistaAlumnos"
              x:Class="AutoescuelaRolling.Views.AlumnosView">
+    <ContentPage.BindingContext>
+        <viewmodels:AlumnosViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="ALUMNOS"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView ItemsSource="{Binding Alumnos}"
+                    SelectedItem="{Binding AlumnoSeleccionado}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                            <Image Source="card.png" WidthRequest="30"
+                                   HorizontalOptions="End">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding BindingContext.DetallesAlumno, Source={x:Reference VistaAlumnos}}"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="avatar.png" WidthRequest="30"/>
+                            <Label FontSize="20"
+                                   Text="{Binding Nombre}"
+                                   HorizontalOptions="Start"/>
+                            <Label FontSize="20"
+                                   Text="{Binding Apellidos}"
+                                   HorizontalOptions="Start"/>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

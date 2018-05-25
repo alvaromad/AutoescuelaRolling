@@ -66,7 +66,7 @@ namespace AutoescuelaRolling.ViewModels
                         viewmodelalumno.Alumno = this.AlumnoSeleccionado;
 
                         detallesview.BindingContext = viewmodelalumno;
-                        await Application.Current.MainPage.Navigation.PushAsync(detallesview);
+                        await Application.Current.MainPage.Navigation.PushModalAsync(detallesview);
                     }
                     else
                     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoescuelaRolling.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,12 @@ namespace AutoescuelaRolling.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AlumnosView : ContentPage
 	{
+        
 		public AlumnosView ()
 		{
 			InitializeComponent ();
-		}
+
+        }
+        
 	}
 }

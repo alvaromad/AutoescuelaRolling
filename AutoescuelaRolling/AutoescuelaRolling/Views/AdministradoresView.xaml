@@ -1,12 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AutoescuelaRolling.ViewModels"
+             x:Name="VistaAdministradores"
              x:Class="AutoescuelaRolling.Views.AdministradoresView">
+    <ContentPage.BindingContext>
+        <viewmodels:AdministradoresViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="ADMINISTRADORES"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView ItemsSource="{Binding Administradores}"
+                    SelectedItem="{Binding AdministradorSeleccionado}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                            <Image Source="card.png" WidthRequest="30"
+                                   HorizontalOptions="End">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding BindingContext.DetallesAdministrador, Source={x:Reference VistaAdministradores}}"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="avatar.png" WidthRequest="30"/>
+                            <Label FontSize="20"
+                                   Text="{Binding Nombre}"
+                                   HorizontalOptions="Start"/>
+                            <Label FontSize="20"
+                                   Text="{Binding Apellido}"
+                                   HorizontalOptions="Start"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

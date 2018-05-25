@@ -1,0 +1,74 @@
+﻿using AutoescuelaRolling.Helpers;
+using AutoescuelaRolling.Models;
+using AutoescuelaRolling.ViewModels.Base;
+using AutoescuelaRolling.Views;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
+
+namespace AutoescuelaRolling.ViewModels
+{
+    public class ProfesoresViewModel : ViewModelBase
+    {
+        HelperAutoescuelaAzure helper;
+
+        public ProfesoresViewModel()
+        {
+            helper = new HelperAutoescuelaAzure();
+            Task.Run(async () => {
+                List<Plantilla> lista = await helper.GetProfesores();
+                this.Profesores = new ObservableCollection<Plantilla>(lista);
+            });
+        }
+
+        private ObservableCollection<Plantilla> _Profesores;
+
+        public ObservableCollection<Plantilla> Profesores
+        {
+            get
+            {
+                return this._Profesores;
+            }
+            set { _Profesores = value;
+                OnPropertyChanged("Profesores");
+            }
+        }
+
+        private Plantilla _ProfesorSeleccionado;
+        public Plantilla ProfesorSeleccionado
+        {
+            get { return this._ProfesorSeleccionado; }
+            set
+            {
+                this._ProfesorSeleccionado = value;
+                OnPropertyChanged("ProfesorSeleccionado");
+            }
+        }
+
+        public Command DetallesAlumno
+        {
+            get
+            {
+                return new Command(async () => {
+                    if (ProfesorSeleccionado != null)
+                    {
+                        DetallesProfesor detallesview = new DetallesProfesor();
+                        ProfesorViewModel viewmodelProfesor = new ProfesorViewModel();
+
+                        viewmodelProfesor.Profesor = this.ProfesorSeleccionado;
+
+                        detallesview.BindingContext = viewmodelProfesor;
+                        await Application.Current.MainPage.Navigation.PushAsync(detallesview);
+                    }
+                    else
+                    {
+                        return;
+                    }
+                });
+            }
+        }
+    }
+}

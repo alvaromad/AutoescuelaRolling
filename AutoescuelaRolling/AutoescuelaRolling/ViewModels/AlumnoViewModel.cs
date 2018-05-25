@@ -44,7 +44,7 @@ namespace AutoescuelaRolling.ViewModels
             {
                 return new Command(async () => {
                     await helper.ModificarAlumno(this.Alumno);
-                    OnPropertyChanged("Doctor");
+                    OnPropertyChanged("Alumno");
                 });
             }
         }

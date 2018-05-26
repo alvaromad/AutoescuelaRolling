@@ -19,7 +19,7 @@
             </StackLayout>
             <ListView ItemsSource="{Binding Profesores}"
                     SelectedItem="{Binding ProfesorSeleccionado}" Grid.Row="1"
-                      x:Name="lstProfesores">
+                      x:Name="lstprofesores">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

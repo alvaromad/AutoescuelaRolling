@@ -18,16 +18,16 @@ namespace AutoescuelaRolling.Views
 		{
 			InitializeComponent ();
             this.entryBusqueda.TextChanged += EntryBusqueda_TextChanged;
-            this.lstProfesores.ItemSelected += LstProfesores_ItemSelected;
+            this.lstprofesores.ItemSelected += Lstprofesores_ItemSelected;
         }
 
-        private void LstProfesores_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void Lstprofesores_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Plantilla profesor = (Plantilla)e.SelectedItem;
             ProfesoresViewModel viewModel = (ProfesoresViewModel)this.BindingContext;
             viewModel.ProfesorSeleccionado = profesor;
-
         }
+
 
         private void EntryBusqueda_TextChanged(object sender, TextChangedEventArgs e)
         {

@@ -15,14 +15,32 @@ namespace AutoescuelaRolling.ViewModels
     {
         HelperAutoescuelaAzure helper;
 
+
+
+
         public ProfesoresViewModel()
         {
-            helper = new HelperAutoescuelaAzure();
             Task.Run(async () => {
-                List<Plantilla> lista = await helper.GetProfesores();
-                this.Profesores = new ObservableCollection<Plantilla>(lista);
+                await CargarProfesores();
             });
+            //SI RECIBO UN MENSAJE, QUIERO CARGAR LOS DOCTORES
+            MessagingCenter.Subscribe<ProfesoresViewModel>(this, "UPDATE"
+                , async (sender) =>
+                {
+                    await this.CargarProfesores();
+                });
         }
+
+        public async Task CargarProfesores()
+        {
+            List<Plantilla> lista = await helper.GetProfesores();
+            this.Profesores = new ObservableCollection<Plantilla>(lista);
+        }
+
+
+
+
+
 
         private ObservableCollection<Plantilla> _Profesores;
 

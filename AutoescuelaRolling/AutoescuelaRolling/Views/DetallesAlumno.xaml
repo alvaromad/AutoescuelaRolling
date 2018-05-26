@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BackgroundImage="back.jpg"
               xmlns:viewmodels="clr-namespace:AutoescuelaRolling.ViewModels"
-             x:Name="DetalleAlumno"
+             x:Name="DetallesAlumno"
              x:Class="AutoescuelaRolling.Views.DetallesAlumno">
     <ContentPage.BindingContext>
         <viewmodels:AlumnoViewModel/>

@@ -25,6 +25,7 @@ namespace AutoescuelaRolling.ViewModels
             {
                 this._Administrador = value;
                 OnPropertyChanged("Administrador");
+
             }
         }
 
@@ -50,6 +51,7 @@ namespace AutoescuelaRolling.ViewModels
                 {
                     await helper.ModificarEmpleado(this.Administrador);
                     OnPropertyChanged("Administrador");
+                    await Application.Current.MainPage.Navigation.PopModalAsync();
                 });
             }
         }
@@ -61,6 +63,7 @@ namespace AutoescuelaRolling.ViewModels
                 return new Command(async () =>
                 {
                     await helper.EliminarAdministrador(this.Administrador.Codigo);
+                    await Application.Current.MainPage.Navigation.PopModalAsync();
                 });
             }
         }

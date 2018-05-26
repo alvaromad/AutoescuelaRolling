@@ -47,6 +47,7 @@ namespace AutoescuelaRolling.ViewModels
                 {
                     await helper.ModificarSeccion(this.Seccion);
                     OnPropertyChanged("Seccion");
+                    await Application.Current.MainPage.Navigation.PopModalAsync();
                 });
             }
         }
@@ -58,6 +59,7 @@ namespace AutoescuelaRolling.ViewModels
                 return new Command(async () =>
                 {
                     await helper.EliminarOficina(Seccion.Seccion);
+                    await Application.Current.MainPage.Navigation.PopModalAsync();
                 });
             }
         }

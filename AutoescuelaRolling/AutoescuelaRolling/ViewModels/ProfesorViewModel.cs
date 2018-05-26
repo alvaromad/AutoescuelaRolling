@@ -47,6 +47,7 @@ namespace AutoescuelaRolling.ViewModels
                 {
                     await helper.ModificarEmpleado(this.Profesor);
                     OnPropertyChanged("Profesor");
+                    await Application.Current.MainPage.Navigation.PopModalAsync();
                 });
             }
         }
@@ -58,6 +59,7 @@ namespace AutoescuelaRolling.ViewModels
                 return new Command(async () =>
                 {
                     await helper.EliminarProfesor(this.Profesor.Codigo);
+                    await Application.Current.MainPage.Navigation.PopModalAsync();
                 });
             }
         }

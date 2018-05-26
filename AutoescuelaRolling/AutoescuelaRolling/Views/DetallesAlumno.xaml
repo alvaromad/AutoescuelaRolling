@@ -63,11 +63,6 @@
                            Text="{Binding Alumno.Password}"/>
             </StackLayout>
             <StackLayout Grid.Row="8" Orientation="Horizontal">
-                <Label Text="IMAGEN:" VerticalOptions="Center"/>
-                <Entry HorizontalOptions="FillAndExpand"
-                           Text="{Binding Alumno.Image}"/>
-            </StackLayout>
-            <StackLayout Grid.Row="9" Orientation="Horizontal">
                 <!--<Button Text="Nuevo Doctor" HorizontalOptions="Center"
                                   Command="{Binding InsertarDoctor}"/>-->
                 <Button Text="Modificar Alumno" HorizontalOptions="Start" BackgroundColor="Yellow" TextColor="Black" FontAttributes="Bold"

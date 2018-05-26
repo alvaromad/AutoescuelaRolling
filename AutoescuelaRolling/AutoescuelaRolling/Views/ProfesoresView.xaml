@@ -4,7 +4,7 @@
              xmlns:viewmodels="clr-namespace:AutoescuelaRolling.ViewModels"
              x:Name="VistaProfesores"
              x:Class="AutoescuelaRolling.Views.ProfesoresView"> 
-    <ContentPage.BindingContext> 
+    <ContentPage.BindingContext>
         <viewmodels:ProfesoresViewModel/>
     </ContentPage.BindingContext>  
     <ContentPage.Content> 

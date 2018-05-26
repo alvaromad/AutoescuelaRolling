@@ -23,6 +23,13 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+
+                                <Label FontSize="20"
+                                   Text="{Binding Nombre}"
+                                   HorizontalOptions="Start"/>
+                                <Label FontSize="20"
+                                   Text="{Binding Apellido}"
+                                   HorizontalOptions="Start"/>
                                 <Image Source="card.png" WidthRequest="30"
                                    HorizontalOptions="End">
                                     <Image.GestureRecognizers>
@@ -30,13 +37,6 @@
                                     </Image.GestureRecognizers>
                                 </Image>
                                 <Image Source="{Binding Image}" WidthRequest="30"/>
-                                <Label FontSize="20"
-                                   Text="{Binding Nombre}"
-                                   HorizontalOptions="Start"/>
-                                <Label FontSize="20"
-                                   Text="{Binding Apellido}"
-                                   HorizontalOptions="Start"/>
-
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

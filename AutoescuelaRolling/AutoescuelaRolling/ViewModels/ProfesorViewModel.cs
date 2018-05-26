@@ -16,7 +16,6 @@ namespace AutoescuelaRolling.ViewModels
         public ProfesorViewModel()
         {
             this.helper = new HelperAutoescuelaAzure();
-           
         }
 
         public Plantilla Profesor

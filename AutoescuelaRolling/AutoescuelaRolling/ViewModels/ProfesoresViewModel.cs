@@ -62,7 +62,7 @@ namespace AutoescuelaRolling.ViewModels
 
                         detallesview.BindingContext = viewmodelProfesor;
                         await Application.Current.MainPage.Navigation.PushModalAsync(detallesview);
-                    }
+                }
                     else
                     {
                         return;

@@ -38,7 +38,7 @@ namespace AutoescuelaRolling.Helpers
                 {
                     if(a.Image == null)
                     {
-                        a.Image = "avatar.jpg";
+                        a.Image = "avatar.png";
                     }
                 }
             }
@@ -62,7 +62,7 @@ namespace AutoescuelaRolling.Helpers
                 {
                     if (a.Image == null)
                     {
-                        a.Image = "avatar.jpg";
+                        a.Image = "avatar.png";
                     }
                 }
             }
@@ -86,7 +86,7 @@ namespace AutoescuelaRolling.Helpers
                 {
                     if (a.Image == null)
                     {
-                        a.Image = "avatar.jpg";
+                        a.Image = "avatar.png";
                     }
                 }
             }

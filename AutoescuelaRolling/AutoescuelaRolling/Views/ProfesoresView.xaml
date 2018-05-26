@@ -5,7 +5,7 @@
              x:Name="VistaProfesores"
              x:Class="AutoescuelaRolling.Views.ProfesoresView"> 
     <ContentPage.BindingContext> 
-        <viewmodels:ProfesoresViewModel/>
+        <viewmodels:ProfesoresViewModel/> 
     </ContentPage.BindingContext>  
     <ContentPage.Content> 
         <ListView ItemsSource="{Binding Profesores}"

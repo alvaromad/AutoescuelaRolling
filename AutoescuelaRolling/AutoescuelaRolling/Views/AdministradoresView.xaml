@@ -8,29 +8,39 @@
         <viewmodels:AdministradoresViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding Administradores}"
-                    SelectedItem="{Binding AdministradorSeleccionado}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                            <Image Source="card.png" WidthRequest="30"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" HorizontalOptions="FillAndExpand">
+                <Label Text="BÚSQUEDA" HorizontalOptions="CenterAndExpand"/>
+                <Entry x:Name="entryBusqueda" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <ListView ItemsSource="{Binding Administradores}"
+                    SelectedItem="{Binding AdministradorSeleccionado}" Grid.Row="1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                <Image Source="card.png" WidthRequest="30"
                                    HorizontalOptions="End">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding BindingContext.DetallesAdministrador, Source={x:Reference VistaAdministradores}}"/>
-                                </Image.GestureRecognizers>
-                            </Image>
-                            <Image Source="{Binding Image}" WidthRequest="30"/>
-                            <Label FontSize="20"
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding BindingContext.DetallesAdministrador, Source={x:Reference VistaAdministradores}}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Image Source="{Binding Image}" WidthRequest="30"/>
+                                <Label FontSize="20"
                                    Text="{Binding Nombre}"
                                    HorizontalOptions="Start"/>
-                            <Label FontSize="20"
+                                <Label FontSize="20"
                                    Text="{Binding Apellido}"
                                    HorizontalOptions="Start"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

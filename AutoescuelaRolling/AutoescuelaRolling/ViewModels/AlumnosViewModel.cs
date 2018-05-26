@@ -79,6 +79,30 @@ namespace AutoescuelaRolling.ViewModels
                 });
             }
         }
+
+        public void Busqueda(string filtro)
+        {
+            if (filtro.Length > 0)
+            {
+                ObservableCollection<Alumno> listaFiltrada = new ObservableCollection<Alumno>();
+                foreach (Alumno p in this.Alumnos)
+                {
+                    if (p.Apellidos.ToUpper().Contains(filtro.ToUpper()))
+                    {
+                        listaFiltrada.Add(p);
+                    }
+                }
+                this.Alumnos = listaFiltrada;
+            }
+            else
+            {
+                Task.Run(async () =>
+                {
+                    List<Alumno> lista = await helper.GetAlumnos();
+                    this.Alumnos = new ObservableCollection<Alumno>(lista);
+                });
+            }
+        }
     }
 }
 

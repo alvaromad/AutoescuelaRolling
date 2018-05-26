@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoescuelaRolling.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,14 @@ namespace AutoescuelaRolling.Views
 		public ProfesoresView ()
 		{
 			InitializeComponent ();
-		}
-	}
+            this.entryBusqueda.TextChanged += EntryBusqueda_TextChanged;
+        }
+
+        private void EntryBusqueda_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string textoIntroducido = e.NewTextValue;
+            ProfesoresViewModel viewModel = (ProfesoresViewModel)this.BindingContext;
+            viewModel.Busqueda(textoIntroducido);
+        }
+    }
 }

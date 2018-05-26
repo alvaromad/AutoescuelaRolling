@@ -461,6 +461,7 @@ namespace AutoescuelaRolling.Helpers
 
         public async Task<bool> ModificarAlumno(Alumno alumno)
         {
+            String nombre = alumno.Nombre;
             string jsondoctor = JsonConvert.SerializeObject(alumno, Formatting.Indented);
             byte[] buffer = System.Text.Encoding.UTF8.GetBytes(jsondoctor);
             ByteArrayContent content = new ByteArrayContent(buffer);

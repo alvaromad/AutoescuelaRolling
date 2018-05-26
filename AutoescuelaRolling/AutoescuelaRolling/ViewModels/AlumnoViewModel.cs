@@ -44,7 +44,8 @@ namespace AutoescuelaRolling.ViewModels
             {
                 return new Command(async () => {
                     await helper.ModificarAlumno(this.Alumno);
-                    OnPropertyChanged("Alumno");
+                    OnPropertyChanged();
+                    await Application.Current.MainPage.Navigation.PopModalAsync();
                 });
             }
         }
@@ -55,6 +56,7 @@ namespace AutoescuelaRolling.ViewModels
             {
                 return new Command(async () => {
                     await helper.EliminarAlumno(this.Alumno.Codigo);
+                    await Application.Current.MainPage.Navigation.PopModalAsync();
                 });
             }
         }

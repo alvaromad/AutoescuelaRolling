@@ -69,7 +69,7 @@
                                   Command="{Binding ModificarAlumno}"/>
                 <Label Text="          " VerticalOptions="Center"/>
                 <Button Text="Eliminar Alumno" HorizontalOptions="End" BackgroundColor="Red" TextColor="White" FontAttributes="Bold"
-                                  Command="{Binding EliminarDoctor}" BorderRadius="5" BorderColor="Black"/>
+                                  Command="{Binding EliminarAlumno}" BorderRadius="5" BorderColor="Black"/>
             </StackLayout>
         </Grid>
 

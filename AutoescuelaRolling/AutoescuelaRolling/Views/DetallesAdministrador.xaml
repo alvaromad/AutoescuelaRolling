@@ -47,28 +47,28 @@
                            Text="{Binding Administrador.Telefono}"/>
             </StackLayout>
             <StackLayout Grid.Row="5" Orientation="Horizontal">
-                <Label Text="Horario:" VerticalOptions="Center"/>
+                <Label Text="HORARIO:" VerticalOptions="Center"/>
 
                 <Entry HorizontalOptions="FillAndExpand"
                            Text="{Binding Administrador.Horario}"/>
             </StackLayout>
-            <StackLayout Grid.Row="7" Orientation="Horizontal">
+            <StackLayout Grid.Row="6" Orientation="Horizontal">
                 <Label Text="USUARIO:" VerticalOptions="Center"/>
                 <Entry HorizontalOptions="FillAndExpand"
                            Text="{Binding Administrador.Usuario}"/>
             </StackLayout>
-            <StackLayout Grid.Row="8" Orientation="Horizontal">
+            <StackLayout Grid.Row="7" Orientation="Horizontal">
                 <Label Text="CONTRASEÑA:" VerticalOptions="Center"/>
                 <Entry HorizontalOptions="FillAndExpand" IsPassword="True"
                            Text="{Binding Administrador.Password}"/>
             </StackLayout>
-            <StackLayout Grid.Row="9" Orientation="Horizontal">
+            <StackLayout Grid.Row="8" Orientation="Horizontal">
                 <!--<Button Text="Nuevo Doctor" HorizontalOptions="Center"
                                   Command="{Binding InsertarDoctor}"/>-->
-                <Button Text="Modificar Administrador" HorizontalOptions="Start" BackgroundColor="Yellow" TextColor="Black" FontAttributes="Bold"
+                <Button Text="Modificar Empleado" HorizontalOptions="Start" BackgroundColor="Yellow" TextColor="Black" FontAttributes="Bold"
                                   Command="{Binding ModificarAdministrador}"/>
                 <Label Text="          " VerticalOptions="Center"/>
-                <Button Text="Eliminar Administrador" HorizontalOptions="End" BackgroundColor="Red" TextColor="White" FontAttributes="Bold"
+                <Button Text="Eliminar Empleado" HorizontalOptions="End" BackgroundColor="Red" TextColor="White" FontAttributes="Bold"
                                   Command="{Binding EliminarAdministrador}" BorderRadius="5" BorderColor="Black"/>
             </StackLayout>
         </Grid>

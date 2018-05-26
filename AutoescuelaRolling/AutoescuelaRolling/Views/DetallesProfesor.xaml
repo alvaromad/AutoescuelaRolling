@@ -48,7 +48,7 @@
                            Text="{Binding Profesor.Telefono}"/>
             </StackLayout>
             <StackLayout Grid.Row="5" Orientation="Horizontal">
-                <Label Text="Horario:" VerticalOptions="Center"/>
+                <Label Text="HORARIO:" VerticalOptions="Center"/>
                 
                 <Entry HorizontalOptions="FillAndExpand"
                            Text="{Binding Profesor.Horario}"/>

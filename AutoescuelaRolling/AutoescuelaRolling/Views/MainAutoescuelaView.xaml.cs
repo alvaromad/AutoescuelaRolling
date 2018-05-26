@@ -54,7 +54,7 @@ namespace AutoescuelaRolling.Views
             menu.Add(seccionesview);
             this.lsvmenu.ItemsSource = menu;
             Detail =
-new NavigationPage((Page)Activator.CreateInstance(typeof(MiPerfilView)));
+new NavigationPage((Page)Activator.CreateInstance(typeof(PaginaPrincipal)));
             this.lsvmenu.ItemSelected += ListView_ItemSelected;
         }
 

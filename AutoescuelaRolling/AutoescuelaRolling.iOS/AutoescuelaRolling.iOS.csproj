@@ -190,4 +190,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\back.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Splash.jpg" />
+  </ItemGroup>
 </Project>

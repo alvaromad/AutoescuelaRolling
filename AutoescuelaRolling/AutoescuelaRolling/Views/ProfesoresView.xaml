@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:AutoescuelaRolling.ViewModels"
              x:Name="VistaProfesores"
-             x:Class="AutoescuelaRolling.Views.ProfesoresView"> 
+             x:Class="AutoescuelaRolling.Views.ProfesoresView">
     <ContentPage.BindingContext>
         <viewmodels:ProfesoresViewModel/>
-    </ContentPage.BindingContext>  
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <ListView ItemsSource="{Binding Profesores}"
                     SelectedItem="{Binding ProfesorSeleccionado}">

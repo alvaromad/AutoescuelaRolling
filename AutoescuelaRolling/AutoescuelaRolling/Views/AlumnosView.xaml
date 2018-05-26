@@ -21,7 +21,7 @@
                                     <TapGestureRecognizer Command="{Binding BindingContext.DetallesAlumno, Source={x:Reference VistaAlumnos}}"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Image Source="avatar.png" WidthRequest="30"/>
+                            <Image Source="{Binding Image}" WidthRequest="30"/>
                             <Label FontSize="20"
                                    Text="{Binding Nombre}"
                                    HorizontalOptions="Start"/>

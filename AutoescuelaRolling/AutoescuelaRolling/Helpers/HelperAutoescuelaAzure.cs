@@ -33,6 +33,14 @@ namespace AutoescuelaRolling.Helpers
             {
                 var contenido = await respuesta.Content.ReadAsStringAsync();
                 listadatos = JsonConvert.DeserializeObject<List<Alumno>>(contenido);
+                //Comprobacion de imagen
+                foreach (Alumno a in listadatos)
+                {
+                    if(a.Image == null)
+                    {
+                        a.Image = "avatar.jpg";
+                    }
+                }
             }
             return listadatos;
         }
@@ -49,6 +57,14 @@ namespace AutoescuelaRolling.Helpers
             {
                 var contenido = await respuesta.Content.ReadAsStringAsync();
                 listadatos = JsonConvert.DeserializeObject<List<Plantilla>>(contenido);
+                //Comprobacion de imagen
+                foreach (Plantilla a in listadatos)
+                {
+                    if (a.Image == null)
+                    {
+                        a.Image = "avatar.jpg";
+                    }
+                }
             }
             return listadatos;
         }
@@ -65,6 +81,14 @@ namespace AutoescuelaRolling.Helpers
             {
                 var contenido = await respuesta.Content.ReadAsStringAsync();
                 listadatos = JsonConvert.DeserializeObject<List<Plantilla>>(contenido);
+                //Comprobacion de imagen
+                foreach (Plantilla a in listadatos)
+                {
+                    if (a.Image == null)
+                    {
+                        a.Image = "avatar.jpg";
+                    }
+                }
             }
             return listadatos;
         }

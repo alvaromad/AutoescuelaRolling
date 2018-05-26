@@ -1,4 +1,5 @@
-﻿using AutoescuelaRolling.ViewModels;
+﻿using AutoescuelaRolling.Models;
+using AutoescuelaRolling.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,15 @@ namespace AutoescuelaRolling.Views
 		{
 			InitializeComponent ();
             this.entryBusqueda.TextChanged += EntryBusqueda_TextChanged;
+            this.lstProfesores.ItemSelected += LstProfesores_ItemSelected;
+        }
+
+        private void LstProfesores_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Plantilla profesor = (Plantilla)e.SelectedItem;
+            ProfesoresViewModel viewModel = (ProfesoresViewModel)this.BindingContext;
+            viewModel.ProfesorSeleccionado = profesor;
+
         }
 
         private void EntryBusqueda_TextChanged(object sender, TextChangedEventArgs e)

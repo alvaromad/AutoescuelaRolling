@@ -18,7 +18,8 @@
                 <Entry x:Name="entryBusqueda" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <ListView ItemsSource="{Binding Profesores}"
-                    SelectedItem="{Binding ProfesorSeleccionado}" Grid.Row="1">
+                    SelectedItem="{Binding ProfesorSeleccionado}" Grid.Row="1"
+                      x:Name="lstProfesores">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

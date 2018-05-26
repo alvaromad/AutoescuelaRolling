@@ -7,7 +7,7 @@
     <ContentPage.BindingContext>
         <viewmodels:ProfesoresViewModel/>
     </ContentPage.BindingContext>  
-    <ContentPage.Content> 
+    <ContentPage.Content>
         <ListView ItemsSource="{Binding Profesores}"
                     SelectedItem="{Binding ProfesorSeleccionado}">
             <ListView.ItemTemplate>

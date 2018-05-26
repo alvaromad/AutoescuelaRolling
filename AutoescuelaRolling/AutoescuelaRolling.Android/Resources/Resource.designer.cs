@@ -2805,7 +2805,7 @@ namespace AutoescuelaRolling.Droid
 			public const int profesor = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int Splash = 2130837780;
+			public const int splashscreen = 2130837780;
 			
 			static Drawable()
 			{

@@ -11,7 +11,7 @@
         <ListView ItemsSource="{Binding Profesores}"
                     SelectedItem="{Binding ProfesorSeleccionado}">
             <ListView.ItemTemplate>
-                <DataTemplate> 
+                <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" VerticalOptions="Center">
                             <Image Source="card.png" WidthRequest="30"
